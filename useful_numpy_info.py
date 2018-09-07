@@ -66,3 +66,13 @@ uniform_samples = np.random.uniform(0, 1, 100)
 my_dist = [0.3, 0.2, 0.1, 0.4]
 sample_element = np.random.choice(my_dist, size=3)
 print(sample_element)
+
+#Save np array to CSV file
+#####################################################################
+import pandas as pd
+df = pd.DataFrame()
+df.to_csv("my_file_path.csv")
+
+#Open np array from CSV file
+#####################################################################
+arr = np.recfromcsv("my_file_path.csv")
